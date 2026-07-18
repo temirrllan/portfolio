@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --muted: #6b7280;
+  --border: #1f1f1f;
+  --accent: #a78bfa;
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* subtle selection color */
+::selection {
+  background: var(--accent);
+  color: #0a0a0a;
+}
+
+/* thin custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 999px;
+  border: 3px solid var(--background);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+
+/* fade-in on mount */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: fadeInUp 0.6s ease both;
+}
