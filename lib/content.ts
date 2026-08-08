@@ -54,7 +54,7 @@ export interface Content {
   };
   bots: {
     heading: string;
-    items: { handle: string; description: string }[];
+    items: { handle: string; description: string; href?: string }[];
   };
   wins: {
     heading: string;
@@ -172,6 +172,18 @@ export const CONTENT: Record<Lang, Content> = {
           handle: "habitly",
           description:
             "habit tracker — create habits, daily swipe check-ins and honest streaks.",
+        },
+        {
+          handle: "@zhansayaamath_bot",
+          href: "https://t.me/zhansayaamath_bot",
+          description:
+            "ai math tutor — solves and explains problems step by step, helps with homework and exam prep.",
+        },
+        {
+          handle: "@erekephysics_bot",
+          href: "https://t.me/erekephysics_bot",
+          description:
+            "ai physics tutor — breaks down problems, explains formulas and concepts in plain language.",
         },
       ],
     },
@@ -356,6 +368,18 @@ export const CONTENT: Record<Lang, Content> = {
           description:
             "трекер привычек — создание привычек, ежедневные отметки свайпом и честные стрики.",
         },
+        {
+          handle: "@zhansayaamath_bot",
+          href: "https://t.me/zhansayaamath_bot",
+          description:
+            "ai-репетитор по математике — решает и объясняет задачи по шагам, помогает с домашкой и подготовкой к экзаменам.",
+        },
+        {
+          handle: "@erekephysics_bot",
+          href: "https://t.me/erekephysics_bot",
+          description:
+            "ai-репетитор по физике — разбирает задачи, объясняет формулы и понятия простым языком.",
+        },
       ],
     },
     wins: {
@@ -538,6 +562,18 @@ export const CONTENT: Record<Lang, Content> = {
           handle: "habitly",
           description:
             "әдеттерді бақылаушы — әдет құру, күнделікті свайппен белгілеу және адал стриктер.",
+        },
+        {
+          handle: "@zhansayaamath_bot",
+          href: "https://t.me/zhansayaamath_bot",
+          description:
+            "математикадан ai-репетитор — есептерді қадам-қадаммен шығарып түсіндіреді, үй тапсырмасы мен емтиханға дайындыққа көмектеседі.",
+        },
+        {
+          handle: "@erekephysics_bot",
+          href: "https://t.me/erekephysics_bot",
+          description:
+            "физикадан ai-репетитор — есептерді талдайды, формулалар мен ұғымдарды қарапайым тілмен түсіндіреді.",
         },
       ],
     },

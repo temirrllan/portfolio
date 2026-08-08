@@ -96,7 +96,23 @@ export default function Sections() {
               key={i}
               className="border-t border-border py-4 first:border-t-0 first:pt-0"
             >
-              <div className="font-mono text-foreground">{b.handle}</div>
+              {b.href ? (
+                <a
+                  href={b.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group inline-flex items-center gap-2 font-mono text-foreground transition-colors hover:text-accent"
+                >
+                  {b.handle}
+                  <ArrowRightIcon
+                    width={14}
+                    height={14}
+                    className="text-muted transition-transform group-hover:translate-x-1 group-hover:text-accent"
+                  />
+                </a>
+              ) : (
+                <div className="font-mono text-foreground">{b.handle}</div>
+              )}
               <p className="mt-1 text-muted">{b.description}</p>
             </div>
           ))}
