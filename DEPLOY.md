@@ -11,7 +11,7 @@ Node, ни PM2, ни сборка: nginx просто отдаёт готовы�
 | Домен | `temirrllan.me` (без `www`) |
 | VPS | `ssh ubuntu@195.49.215.152` (Ubuntu + nginx + certbot) |
 | Папка сайта на сервере | `/var/www/html/temirrllan` |
-| Локальный билд | `D:\Projects\Brain\Projects\porfolio\out` |
+| Локальный билд | `/Users/temirlanraiymbek/projects/portfolio/out` |
 | nginx-конфиг | `/etc/nginx/sites-available/temirrllan.me` |
 | Регистратор / DNS | ps.kz (личный кабинет) |
 
@@ -30,8 +30,8 @@ Node, ни PM2, ни сборка: nginx просто отдаёт готовы�
 - Это создаёт A-запись корня: `temirrllan.me → 195.49.215.152`.
 - Домен должен использовать NS-серверы ps.kz (`ns1.ps.kz`, `ns2.ps.kz`).
 
-Проверка (на своём ПК, PowerShell):
-```powershell
+Проверка (на своём ПК):
+```bash
 nslookup temirrllan.me
 ```
 Ждём в ответе `195.49.215.152`.
@@ -49,17 +49,14 @@ sudo apt install -y unzip
 ```
 
 ### 3. Собрать и залить статику
-Локально (PowerShell, папка проекта):
-```powershell
-cd D:\Projects\Brain\Projects\porfolio
-npm run build
-Compress-Archive -Path .\out\* -DestinationPath .\temirrllan-me-site.zip -Force
-scp .\temirrllan-me-site.zip ubuntu@195.49.215.152:/tmp/
-```
-На сервере:
+Локально (macOS, папка проекта):
 ```bash
-unzip -o /tmp/temirrllan-me-site.zip -d /var/www/html/temirrllan
-rm /tmp/temirrllan-me-site.zip
+cd /Users/temirlanraiymbek/projects/portfolio
+npm run build
+rsync -avz --delete out/ ubuntu@195.49.215.152:/var/www/html/temirrllan/
+```
+Проверка на сервере:
+```bash
 ls -la /var/www/html/temirrllan   # должны быть index.html, _next/, media/, favicon.svg, 404.html
 ```
 
@@ -127,23 +124,29 @@ sudo certbot certificates | grep temirrllan
 
 ## Обновление сайта (в будущем)
 
-Правки контента — в `lib/content.ts`. Потом:
+Правки контента — в `lib/content.ts`. Потом одной командой локально (macOS):
 
-Локально (PowerShell):
-```powershell
-cd D:\Projects\Brain\Projects\porfolio
-npm run build
-Compress-Archive -Path .\out\* -DestinationPath .\temirrllan-me-site.zip -Force
-scp .\temirrllan-me-site.zip ubuntu@195.49.215.152:/tmp/
-```
-На сервере:
 ```bash
-rm -rf /var/www/html/temirrllan/*
-unzip -o /tmp/temirrllan-me-site.zip -d /var/www/html/temirrllan
-rm /tmp/temirrllan-me-site.zip
+cd /Users/temirlanraiymbek/projects/portfolio
+npm run build
+rsync -avz --delete out/ ubuntu@195.49.215.152:/var/www/html/temirrllan/
 ```
+
+`--delete` убирает с сервера файлы, которых больше нет в билде (старые хешированные
+чанки и шрифты Next.js). Сначала можно прогнать вхолостую с `-n`, чтобы увидеть план:
+`rsync -avzn --delete out/ ubuntu@195.49.215.152:/var/www/html/temirrllan/`.
+
+Проверка, что залилось:
+```bash
+curl -s -o /dev/null -w "%{http_code}\n" https://temirrllan.me/
+```
+
 nginx перезапускать не нужно — статика подхватывается сразу (может понадобиться
-Ctrl+F5 в браузере из-за кэша).
+Cmd+Shift+R в браузере из-за кэша).
+
+> **Git пушить необязательно.** На сервере нет ни репозитория, ни Node — nginx просто
+> раздаёт файлы из папки. `git push` заливает код на GitHub, но на сайт не влияет;
+> сайт обновляет только `rsync` выше.
 
 ---
 
