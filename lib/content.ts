@@ -165,11 +165,13 @@ export const CONTENT: Record<Lang, Content> = {
       items: [
         {
           handle: "@Aibotfbot",
+          href: "https://t.me/Aibotfbot",
           description:
             "ai bot for kazakhtelecom field technicians — logs work tickets from free-form text. private, access-restricted.",
         },
         {
-          handle: "habitly",
+          handle: "@CheckHabitlyBot",
+          href: "https://t.me/CheckHabitlyBot",
           description:
             "habit tracker — create habits, daily swipe check-ins and honest streaks.",
         },
@@ -360,11 +362,13 @@ export const CONTENT: Record<Lang, Content> = {
       items: [
         {
           handle: "@Aibotfbot",
+          href: "https://t.me/Aibotfbot",
           description:
             "ai-бот для монтёров kazakhtelecom — заносит наряды из свободного текста. приватный, с ограниченным доступом.",
         },
         {
-          handle: "habitly",
+          handle: "@CheckHabitlyBot",
+          href: "https://t.me/CheckHabitlyBot",
           description:
             "трекер привычек — создание привычек, ежедневные отметки свайпом и честные стрики.",
         },
@@ -555,11 +559,13 @@ export const CONTENT: Record<Lang, Content> = {
       items: [
         {
           handle: "@Aibotfbot",
+          href: "https://t.me/Aibotfbot",
           description:
             "kazakhtelecom монтёрлеріне арналған ai-бот — нарядтарды еркін мәтіннен енгізеді. жабық, қолжетімділігі шектеулі.",
         },
         {
-          handle: "habitly",
+          handle: "@CheckHabitlyBot",
+          href: "https://t.me/CheckHabitlyBot",
           description:
             "әдеттерді бақылаушы — әдет құру, күнделікті свайппен белгілеу және адал стриктер.",
         },
