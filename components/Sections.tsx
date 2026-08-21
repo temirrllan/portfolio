@@ -49,7 +49,10 @@ export default function Sections() {
               </div>
               {item.cta && (
                 <a
-                  href="#contact"
+                  href={item.href ?? "#contact"}
+                  {...(item.href
+                    ? { target: "_blank", rel: "noreferrer" }
+                    : {})}
                   className="mt-5 inline-flex w-fit items-center gap-2 rounded-full border border-accent/40 px-4 py-2 font-mono text-sm text-accent transition-colors hover:bg-accent hover:text-background"
                 >
                   {item.cta}

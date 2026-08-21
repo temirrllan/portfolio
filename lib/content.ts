@@ -46,6 +46,7 @@ export interface Content {
       description: string;
       tags: string[];
       cta?: string; // e.g. "get in touch →"
+      href?: string; // external link for the cta (defaults to #contact)
     }[];
   };
   projects: {
@@ -131,6 +132,16 @@ export const CONTENT: Record<Lang, Content> = {
           description:
             "a toolkit for wiring ai into any business process — from telegram bots and mini apps to document parsing and reports. packing the pieces i keep reusing on client projects into one product.",
           tags: ["ai", "automation", "mini apps", "no-code"],
+        },
+        {
+          status: "in development",
+          title: "mydebate",
+          subtitle: "debate tournaments and mun conferences in kazakhstan",
+          description:
+            "a platform that brings debate tournaments and mun conferences together: catalog with search and filters, participant registration, organizer dashboard with a participant list, moderation queue and an admin panel. roles grow automatically — user becomes an organizer once their first tournament is approved.",
+          tags: ["next.js", "typescript", "prisma", "postgres"],
+          cta: "github",
+          href: "https://github.com/temirrllan/mydebate",
         },
       ],
     },
@@ -329,6 +340,16 @@ export const CONTENT: Record<Lang, Content> = {
             "набор инструментов, чтобы встроить ai в любой бизнес-процесс: от telegram-ботов и mini apps до разбора документов и отчётов. собираю то, что переиспользую на клиентских проектах, в один продукт.",
           tags: ["ai", "автоматизация", "mini apps", "no-code"],
         },
+        {
+          status: "в разработке",
+          title: "mydebate",
+          subtitle: "дебатные турниры и mun-конференции казахстана",
+          description:
+            "платформа, объединяющая дебатные турниры и mun-конференции: каталог с поиском и фильтрами, регистрация участников, кабинет организатора со списком заявок, очередь модерации и админ-панель. роли повышаются автоматически — пользователь становится организатором после одобрения первого турнира.",
+          tags: ["next.js", "typescript", "prisma", "postgres"],
+          cta: "github",
+          href: "https://github.com/temirrllan/mydebate",
+        },
       ],
     },
     projects: {
@@ -525,6 +546,16 @@ export const CONTENT: Record<Lang, Content> = {
           description:
             "ai-ды кез келген бизнес-процеске енгізуге арналған құралдар жинағы: telegram-боттар мен mini apps-тан құжаттарды талдау мен есептерге дейін. клиент жобаларында қайта қолданатын нәрселерімді бір өнімге жинаймын.",
           tags: ["ai", "автоматтандыру", "mini apps", "no-code"],
+        },
+        {
+          status: "әзірленуде",
+          title: "mydebate",
+          subtitle: "қазақстандағы дебат турнирлері мен mun-конференциялар",
+          description:
+            "дебат турнирлері мен mun-конференцияларды біріктіретін платформа: іздеу мен сүзгілері бар каталог, қатысушыларды тіркеу, ұйымдастырушы кабинеті мен өтінімдер тізімі, модерация кезегі және админ-панель. рөлдер автоматты түрде өседі — бірінші турнир мақұлданғаннан кейін қолданушы ұйымдастырушыға айналады.",
+          tags: ["next.js", "typescript", "prisma", "postgres"],
+          cta: "github",
+          href: "https://github.com/temirrllan/mydebate",
         },
       ],
     },
