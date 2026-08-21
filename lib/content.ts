@@ -132,8 +132,8 @@ export const CONTENT: Record<Lang, Content> = {
           description:
             "a platform that brings debate tournaments and mun conferences together: catalog with search and filters, participant registration, organizer dashboard with a participant list, moderation queue and an admin panel. roles grow automatically — user becomes an organizer once their first tournament is approved.",
           tags: ["next.js", "typescript", "prisma", "postgres"],
-          cta: "github",
-          href: "https://github.com/temirrllan/mydebate",
+          cta: "visit the site",
+          href: "https://mydebate.kz",
         },
       ],
     },
@@ -331,8 +331,8 @@ export const CONTENT: Record<Lang, Content> = {
           description:
             "платформа, объединяющая дебатные турниры и mun-конференции: каталог с поиском и фильтрами, регистрация участников, кабинет организатора со списком заявок, очередь модерации и админ-панель. роли повышаются автоматически — пользователь становится организатором после одобрения первого турнира.",
           tags: ["next.js", "typescript", "prisma", "postgres"],
-          cta: "github",
-          href: "https://github.com/temirrllan/mydebate",
+          cta: "перейти на сайт",
+          href: "https://mydebate.kz",
         },
       ],
     },
@@ -530,8 +530,8 @@ export const CONTENT: Record<Lang, Content> = {
           description:
             "дебат турнирлері мен mun-конференцияларды біріктіретін платформа: іздеу мен сүзгілері бар каталог, қатысушыларды тіркеу, ұйымдастырушы кабинеті мен өтінімдер тізімі, модерация кезегі және админ-панель. рөлдер автоматты түрде өседі — бірінші турнир мақұлданғаннан кейін қолданушы ұйымдастырушыға айналады.",
           tags: ["next.js", "typescript", "prisma", "postgres"],
-          cta: "github",
-          href: "https://github.com/temirrllan/mydebate",
+          cta: "сайтқа өту",
+          href: "https://mydebate.kz",
         },
       ],
     },
