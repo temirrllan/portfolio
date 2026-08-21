@@ -9,14 +9,15 @@ Node, ни PM2, ни сборка: nginx просто отдаёт готовы�
 | Что | Значение |
 |-----|----------|
 | Домен | `temirrllan.me` (без `www`) |
-| VPS | `ssh ubuntu@195.49.215.152` (Ubuntu + nginx + certbot) |
+| VPS | `ssh ubuntu@87.199.130.197` (Ubuntu + nginx + certbot) |
 | Папка сайта на сервере | `/var/www/html/temirrllan` |
 | Локальный билд | `/Users/temirlanraiymbek/projects/portfolio/out` |
 | nginx-конфиг | `/etc/nginx/sites-available/temirrllan.me` |
 | Регистратор / DNS | ps.kz (личный кабинет) |
 
-Тот же сервер также обслуживает: `api.eventmate.asia` (PM2 :3001),
-`app.eventmate.asia`, `landing.eventmate.asia`.
+Сервер выделен только под портфолио (Ubuntu 24.04 LTS, 1 vCPU / 1 ГБ RAM / 20 ГБ SSD).
+Предыдущий VPS `195.49.215.152` (там же жил eventmate) перестал отвечать — с него съехали
+21.08.2026.
 
 ---
 
@@ -26,22 +27,22 @@ Node, ни PM2, ни сборка: nginx просто отдаёт готовы�
 Только когда домен в статусе **«Активен»** (не «ожидает»).
 
 - Кабинет ps.kz → **Мои домены** → `temirrllan.me` → **Управление / DNS** →
-  **создать DNS-зону**, поле «IP-адрес сайта»: `195.49.215.152`.
-- Это создаёт A-запись корня: `temirrllan.me → 195.49.215.152`.
+  **создать DNS-зону**, поле «IP-адрес сайта»: `87.199.130.197`.
+- Это создаёт A-запись корня: `temirrllan.me → 87.199.130.197`.
 - Домен должен использовать NS-серверы ps.kz (`ns1.ps.kz`, `ns2.ps.kz`).
 
 Проверка (на своём ПК):
 ```bash
 nslookup temirrllan.me
 ```
-Ждём в ответе `195.49.215.152`.
+Ждём в ответе `87.199.130.197`.
 
 > Ошибка «Domain does not belong to account» = домен ещё «ожидает» (не завершена
 > регистрация/оплата). Дождаться статуса «Активен» или пинать поддержку ps.kz.
 
 ### 2. Папка на сервере
 ```bash
-ssh ubuntu@195.49.215.152
+ssh ubuntu@87.199.130.197
 
 sudo mkdir -p /var/www/html/temirrllan
 sudo chown -R ubuntu:ubuntu /var/www/html/temirrllan
@@ -53,7 +54,7 @@ sudo apt install -y unzip
 ```bash
 cd /Users/temirlanraiymbek/projects/portfolio
 npm run build
-rsync -avz --delete out/ ubuntu@195.49.215.152:/var/www/html/temirrllan/
+rsync -avz --delete out/ ubuntu@87.199.130.197:/var/www/html/temirrllan/
 ```
 Проверка на сервере:
 ```bash
@@ -129,12 +130,12 @@ sudo certbot certificates | grep temirrllan
 ```bash
 cd /Users/temirlanraiymbek/projects/portfolio
 npm run build
-rsync -avz --delete out/ ubuntu@195.49.215.152:/var/www/html/temirrllan/
+rsync -avz --delete out/ ubuntu@87.199.130.197:/var/www/html/temirrllan/
 ```
 
 `--delete` убирает с сервера файлы, которых больше нет в билде (старые хешированные
 чанки и шрифты Next.js). Сначала можно прогнать вхолостую с `-n`, чтобы увидеть план:
-`rsync -avzn --delete out/ ubuntu@195.49.215.152:/var/www/html/temirrllan/`.
+`rsync -avzn --delete out/ ubuntu@87.199.130.197:/var/www/html/temirrllan/`.
 
 Проверка, что залилось:
 ```bash
@@ -157,5 +158,6 @@ Cmd+Shift+R в браузере из-за кэша).
 - Картинки идут через обычный `<img>`, поэтому `next/image` оптимизацию не трогаем.
 - Если после старта вылезет **403 Forbidden** — права: `sudo chown -R www-data:www-data
   /var/www/html/temirrllan` (тогда будущие `unzip` делать через `sudo`).
-- Статус на момент настройки: сервер готов (папка + статика + nginx проверены),
-  ждём активацию домена в ps.kz → шаги 1 и 5.
+- Вход по SSH-ключу `~/.ssh/id_ed25519` (пользователь `ubuntu`), пароль не нужен.
+- ufw установлен, правила для OpenSSH и Nginx Full добавлены, но сам фаервол выключен
+  (`sudo ufw status` → inactive). Включать: `sudo ufw enable`.
