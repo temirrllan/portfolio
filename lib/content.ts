@@ -127,14 +127,6 @@ export const CONTENT: Record<Lang, Content> = {
         },
         {
           status: "in development",
-          title: "ai automation studio",
-          subtitle: "processes without the busywork",
-          description:
-            "a toolkit for wiring ai into any business process — from telegram bots and mini apps to document parsing and reports. packing the pieces i keep reusing on client projects into one product.",
-          tags: ["ai", "automation", "mini apps", "no-code"],
-        },
-        {
-          status: "in development",
           title: "mydebate",
           subtitle: "debate tournaments and mun conferences in kazakhstan",
           description:
@@ -334,14 +326,6 @@ export const CONTENT: Record<Lang, Content> = {
         },
         {
           status: "в разработке",
-          title: "ai-студия автоматизации",
-          subtitle: "процессы без рутины",
-          description:
-            "набор инструментов, чтобы встроить ai в любой бизнес-процесс: от telegram-ботов и mini apps до разбора документов и отчётов. собираю то, что переиспользую на клиентских проектах, в один продукт.",
-          tags: ["ai", "автоматизация", "mini apps", "no-code"],
-        },
-        {
-          status: "в разработке",
           title: "mydebate",
           subtitle: "дебатные турниры и mun-конференции казахстана",
           description:
@@ -538,14 +522,6 @@ export const CONTENT: Record<Lang, Content> = {
             "лидтерді сұрыптап, клиенттерге 24/7 жауап беріп, кездесулерді тікелей crm-ге жазатын ai-агент. воронкаға қосасың — өзі жұмыс істейді.",
           tags: ["ai-агенттер", "amocrm", "telegram", "автоматтандыру"],
           cta: "байланысу",
-        },
-        {
-          status: "әзірленуде",
-          title: "ai-автоматтандыру студиясы",
-          subtitle: "рутинасыз процестер",
-          description:
-            "ai-ды кез келген бизнес-процеске енгізуге арналған құралдар жинағы: telegram-боттар мен mini apps-тан құжаттарды талдау мен есептерге дейін. клиент жобаларында қайта қолданатын нәрселерімді бір өнімге жинаймын.",
-          tags: ["ai", "автоматтандыру", "mini apps", "no-code"],
         },
         {
           status: "әзірленуде",
