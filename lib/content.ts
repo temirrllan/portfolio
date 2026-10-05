@@ -108,7 +108,7 @@ export const CONTENT: Record<Lang, Content> = {
       heading: "about",
       paragraphs: [
         "developer and ai integrator. i bring ai into business: telegram bots, ai agents, process automation, websites, landing pages, telegram mini apps, and amocrm setup.",
-        "astana hub resident. developer at ittalker.academy. i work with harness ai agent.",
+        "astana hub resident. developer at ittalker.academy (2025–2026). i work with harness ai agent.",
         "freelancer. solana by decentrathon 5.0 prize winner.",
       ],
     },
@@ -210,7 +210,7 @@ export const CONTENT: Record<Lang, Content> = {
     experience: {
       heading: "experience",
       items: [
-        { title: "developer at ittalker.academy", meta: "current" },
+        { title: "developer at ittalker.academy", meta: "2025 – 2026" },
         { title: "freelance developer & ai integrator", meta: "now" },
         { title: "astana hub resident", meta: "now" },
       ],
@@ -316,7 +316,7 @@ export const CONTENT: Record<Lang, Content> = {
       heading: "обо мне",
       paragraphs: [
         "разработчик и ai-интегратор. внедряю ai в бизнес: telegram-боты, ai-агенты, автоматизация процессов, сайты, лендинги, telegram mini apps, настройка amocrm.",
-        "резидент astana hub. разработчик в ittalker.academy. работаю с harness ai agent.",
+        "резидент astana hub. разработчик в ittalker.academy (2025–2026). работаю с harness ai agent.",
         "фрилансер. призёр solana by decentrathon 5.0.",
       ],
     },
@@ -418,7 +418,7 @@ export const CONTENT: Record<Lang, Content> = {
     experience: {
       heading: "опыт",
       items: [
-        { title: "разработчик в ittalker.academy", meta: "сейчас" },
+        { title: "разработчик в ittalker.academy", meta: "2025 – 2026" },
         { title: "фриланс-разработчик и ai-интегратор", meta: "сейчас" },
         { title: "резидент astana hub", meta: "сейчас" },
       ],
@@ -524,7 +524,7 @@ export const CONTENT: Record<Lang, Content> = {
       heading: "өзім туралы",
       paragraphs: [
         "әзірлеуші және ai-интегратор. бизнеске ai енгіземін: telegram-боттар, ai-агенттер, процестерді автоматтандыру, сайттар, лендингтер, telegram mini apps, amocrm баптау.",
-        "astana hub резиденті. ittalker.academy әзірлеушісі. harness ai agent-пен жұмыс істеймін.",
+        "astana hub резиденті. ittalker.academy әзірлеушісі (2025–2026). harness ai agent-пен жұмыс істеймін.",
         "фрилансер. solana by decentrathon 5.0 жүлдегері.",
       ],
     },
@@ -626,7 +626,7 @@ export const CONTENT: Record<Lang, Content> = {
     experience: {
       heading: "тәжірибе",
       items: [
-        { title: "ittalker.academy әзірлеушісі", meta: "қазір" },
+        { title: "ittalker.academy әзірлеушісі", meta: "2025 – 2026" },
         { title: "фриланс әзірлеуші және ai-интегратор", meta: "қазір" },
         { title: "astana hub резиденті", meta: "қазір" },
       ],
