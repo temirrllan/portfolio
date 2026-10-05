@@ -162,6 +162,14 @@ export const CONTENT: Record<Lang, Content> = {
           tags: ["solana", "web3", "climatetech"],
           href: "https://www.zhasyl.kz/ru",
         },
+        {
+          title: "orgstructure (afm.codes)",
+          year: "2026",
+          description:
+            "ai agent that compares organizational documents before and after a reorganization: finds shifted responsibilities, lost or duplicated functions and conflicts, each finding backed by document → clause → quote. includes an approval flow, acknowledgement tracking and a docx report. built at a hackathon.",
+          tags: ["python", "streamlit", "ai agents", "hackathon"],
+          href: "https://www.afm.codes",
+        },
       ],
     },
     bots: {
@@ -362,6 +370,14 @@ export const CONTENT: Record<Lang, Content> = {
           tags: ["solana", "web3", "climatetech"],
           href: "https://www.zhasyl.kz/ru",
         },
+        {
+          title: "orgstructure (afm.codes)",
+          year: "2026",
+          description:
+            "ии-агент для анализа организационной структуры: сравнивает документы до и после реорганизации, находит изменения ответственности, потерянные и дублирующиеся функции, каждая находка с источником: документ → пункт → цитата. есть согласование, ознакомление сотрудников и отчёт docx. сделан на хакатоне.",
+          tags: ["python", "streamlit", "ai agents", "hackathon"],
+          href: "https://www.afm.codes",
+        },
       ],
     },
     bots: {
@@ -561,6 +577,14 @@ export const CONTENT: Record<Lang, Content> = {
             "solana-дағы көміртек офсеті: әр co₂ тоннасын токендеу, бөлшектеу және on-chain верификациялау. ашық көміртек несиелері нарығына арналған web3-инфрақұрылым.",
           tags: ["solana", "web3", "climatetech"],
           href: "https://www.zhasyl.kz/ru",
+        },
+        {
+          title: "orgstructure (afm.codes)",
+          year: "2026",
+          description:
+            "ұйымдық құрылымды талдайтын ии-агент: қайта ұйымдастыруға дейінгі және кейінгі құжаттарды салыстырады, жауапкершілік өзгерістерін, жоғалған және қайталанатын функцияларды табады, әр нәтиже дереккөзбен: құжат → тармақ → дәйексөз. келісу, қызметкерлерді таныстыру және docx есебі бар. хакатонда жасалған.",
+          tags: ["python", "streamlit", "ai agents", "hackathon"],
+          href: "https://www.afm.codes",
         },
       ],
     },
