@@ -17,7 +17,7 @@ export interface SocialLink {
 
 // Social icons in the hero (same for every language)
 export const SOCIALS: SocialLink[] = [
-  { type: "email", href: "mailto:raiymbektemirlan45@gmail.com" },
+  { type: "email", href: "mailto:temirrllan.me@gmail.com" },
   { type: "github", href: "https://github.com/temirrllan" },
   { type: "telegram", href: "https://t.me/kimjjk" },
   { type: "linkedin", href: "https://www.linkedin.com/in/temirlanraiymbek/" },
@@ -51,7 +51,7 @@ export interface Content {
   };
   projects: {
     heading: string;
-    items: { title: string; year: string; description: string; tags: string[] }[];
+    items: { title: string; year: string; description: string; tags: string[]; href?: string }[];
   };
   bots: {
     heading: string;
@@ -160,6 +160,7 @@ export const CONTENT: Record<Lang, Content> = {
           description:
             "carbon offsets on solana: tokenization, fractionalization and on-chain verification of every tonne of co₂. web3 infrastructure for a transparent carbon credit market.",
           tags: ["solana", "web3", "climatetech"],
+          href: "https://www.zhasyl.kz/ru",
         },
       ],
     },
@@ -276,7 +277,7 @@ export const CONTENT: Record<Lang, Content> = {
       heading: "contact",
       intro: "open to interesting tasks and collaboration. drop a line — i reply within the day.",
       items: [
-        { label: "email", value: "raiymbektemirlan45@gmail.com", href: "mailto:raiymbektemirlan45@gmail.com" },
+        { label: "email", value: "temirrllan.me@gmail.com", href: "mailto:temirrllan.me@gmail.com" },
         { label: "github", value: "github.com/temirrllan", href: "https://github.com/temirrllan" },
         { label: "telegram", value: "@kimjjk", href: "https://t.me/kimjjk" },
         { label: "linkedin", value: "in/temirlanraiymbek", href: "https://www.linkedin.com/in/temirlanraiymbek/" },
@@ -359,6 +360,7 @@ export const CONTENT: Record<Lang, Content> = {
           description:
             "углеродный офсет на solana: токенизация, дробление и on-chain верификация каждой тонны co₂. web3-инфраструктура для прозрачного рынка углеродных кредитов.",
           tags: ["solana", "web3", "climatetech"],
+          href: "https://www.zhasyl.kz/ru",
         },
       ],
     },
@@ -475,7 +477,7 @@ export const CONTENT: Record<Lang, Content> = {
       heading: "контакты",
       intro: "открыт для интересных задач и сотрудничества. напишите — отвечаю в течение дня.",
       items: [
-        { label: "email", value: "raiymbektemirlan45@gmail.com", href: "mailto:raiymbektemirlan45@gmail.com" },
+        { label: "email", value: "temirrllan.me@gmail.com", href: "mailto:temirrllan.me@gmail.com" },
         { label: "github", value: "github.com/temirrllan", href: "https://github.com/temirrllan" },
         { label: "telegram", value: "@kimjjk", href: "https://t.me/kimjjk" },
         { label: "linkedin", value: "in/temirlanraiymbek", href: "https://www.linkedin.com/in/temirlanraiymbek/" },
@@ -558,6 +560,7 @@ export const CONTENT: Record<Lang, Content> = {
           description:
             "solana-дағы көміртек офсеті: әр co₂ тоннасын токендеу, бөлшектеу және on-chain верификациялау. ашық көміртек несиелері нарығына арналған web3-инфрақұрылым.",
           tags: ["solana", "web3", "climatetech"],
+          href: "https://www.zhasyl.kz/ru",
         },
       ],
     },
@@ -674,7 +677,7 @@ export const CONTENT: Record<Lang, Content> = {
       heading: "байланыс",
       intro: "қызықты міндеттер мен серіктестікке ашықпын. жазыңыз — тәулік ішінде жауап беремін.",
       items: [
-        { label: "email", value: "raiymbektemirlan45@gmail.com", href: "mailto:raiymbektemirlan45@gmail.com" },
+        { label: "email", value: "temirrllan.me@gmail.com", href: "mailto:temirrllan.me@gmail.com" },
         { label: "github", value: "github.com/temirrllan", href: "https://github.com/temirrllan" },
         { label: "telegram", value: "@kimjjk", href: "https://t.me/kimjjk" },
         { label: "linkedin", value: "in/temirlanraiymbek", href: "https://www.linkedin.com/in/temirlanraiymbek/" },

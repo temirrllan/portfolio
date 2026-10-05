@@ -74,7 +74,13 @@ export default function Sections() {
             >
               <div className="flex items-baseline justify-between gap-4">
                 <h3 className="text-lg font-medium transition-colors group-hover:text-accent">
-                  {p.title}
+                  {p.href ? (
+                    <a href={p.href} target="_blank" rel="noreferrer">
+                      {p.title}
+                    </a>
+                  ) : (
+                    p.title
+                  )}
                 </h3>
                 <span className="shrink-0 font-mono text-sm text-muted">
                   {p.year}
